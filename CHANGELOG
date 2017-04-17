@@ -1,0 +1,33 @@
+PHP Spam Poison (phpwpoison).
+Copyright ©2004, 2005 by Mario A. Valdez-Ramirez
+You can contact Mario A. Valdez-Ramirez by email at
+mario@mariovaldez.org or by paper mail at 
+Olmos 809, San Nicolas, NL. 66495, Mexico.
+
+
+This is version 1.2.0.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1.2.0:
+
+Added two options to allow the generation of random email addresses
+with non-random domain names (using the domains from the spammers
+list).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1.1.0:
+
+Added spammer-address adding option. Now the script can add the email
+addresses of known spammers to the fake listings; so the listings are
+fake addresses mixed with spammer addresses. (Use with caution and
+only if you know how to search for the real source of spam: remember
+most spammers use fake source addresses).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1.0.0:
+
+Initial release.
+
