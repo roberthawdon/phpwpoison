@@ -1,8 +1,11 @@
 # PHP Spam Poison (phpwpoison).
-Copyright ©2004, 2005 by Mario A. Valdez-Ramirez
+2004-2005 by Mario A. Valdez-Ramirez
 You can contact Mario A. Valdez-Ramirez by email at
 mario@mariovaldez.org or by paper mail at 
 Olmos 809, San Nicolas, NL. 66495, Mexico.
+
+Updated 2017 by Robert Ian Hawdon
+https://robertianhawdon.me.uk/
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
