@@ -1,10 +1,14 @@
 <?php
 // PHP Spam Poison (phpwpoison).
-// Copyright ©2004, 2005 by Mario A. Valdez-Ramirez.
+// 2004-2005 - Mario A. Valdez-Ramirez.
+// 2017 - Robert Ian Hawdon.
 
 // You can contact Mario A. Valdez-Ramirez
 // by email at mario@mariovaldez.org or paper mail at
 // Olmos 809, San Nicolas, NL. 66495, Mexico.
+
+// Robert Ian Hawdon:
+// https://robertianhawdon.me.uk/
 
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -71,7 +75,7 @@ $pwp_html_footer = "</body></html>\n";
 
 
 
-$pwp_script_version = "1.2.0";
+$pwp_script_version = "1.3.0";
 
 
 // Get the URL and split it, finding the target and the level...
@@ -94,9 +98,9 @@ if ($pwp_target == $pwp_scriptname) {
 else {
   unset ($pwp_url_array[(count ($pwp_url_array) - 1)]);
 }
-$pwp_level = ereg_replace("[^[:digit:]_]", "", $pwp_target);
+$pwp_level = preg_replace("/[^[:digit:]_]/", "", $pwp_target);
 if (is_numeric ($pwp_level)) { $pwp_level = abs ($pwp_level); } else { $pwp_level = 0; }
-$pwp_target = ereg_replace("[^[:alpha:]_]", "", $pwp_target);
+$pwp_target = preg_replace("/[^[:alpha:]_]/", "", $pwp_target);
 $pwp_scripturl = implode ("/", $pwp_url_array);
 
 
@@ -160,7 +164,7 @@ global $pwp_minword_len, $pwp_maxword_len;
       if (($sourcefile) && ($targetfile)) {
         while ($wordcontent = fgets ($sourcefile, 1024)) {
           if ($ignorecount == $randomline) {
-            $wordcontent = ereg_replace("[^[:alpha:]_]", "", strtolower ($wordcontent)) . "\n";
+            $wordcontent = preg_replace("/[^[:alpha:]_]/", "", strtolower ($wordcontent)) . "\n";
             if ((strlen ($wordcontent) >= $pwp_minword_len) && (strlen ($wordcontent) <= $pwp_maxword_len)) {
               fwrite ($targetfile, $wordcontent);
             }
