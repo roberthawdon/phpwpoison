@@ -77,6 +77,16 @@ $pwp_html_footer = "</body></html>\n";
 
 $pwp_script_version = "1.3.0";
 
+function fpwp_getenv($name, $default) {
+  $env = getenv("PWP_" . $name);
+  if (!$env) {
+    return $default;
+  }
+  return $env;
+}
+
+// Get config from environment vars or leave as previously set above, if absent.
+$pwp_scriptname = fpwp_getenv("SCRIPTNAME", $pwp_scriptname);
 
 // Get the URL and split it, finding the target and the level...
 $pwp_req_uri = $_SERVER["REQUEST_URI"];
