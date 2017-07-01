@@ -1,4 +1,4 @@
-FROM php:5-apache
+FROM php:7-apache
 
 COPY emailusers.php /var/www/html/
 ENV PWP_SCRIPTNAME emailusers.php
